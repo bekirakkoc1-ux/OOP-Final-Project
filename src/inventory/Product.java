@@ -1,26 +1,26 @@
 package inventory;
 
-// Storable interface'ini implemente ediyoruz (Kalıtım/Polimorfizm)
+// Interface'i implemente ettim (Storable)
 public class Product implements Storable {
-    // Encapsulation: Değişkenler private (dışarıya kapalı)
+    
+    // Encapsulation için değişkenleri private yaptım
     private String productId;
     private String name;
     private double price;
     private int quantity;
 
-    // Constructor (Yapıcı Metot)
+    // Constructor
     public Product(String productId, String name, double price, int quantity) {
         this.productId = productId;
         this.name = name;
-        setPrice(price); // Fiyat kontrolü için setter kullanıyoruz
+        setPrice(price); // Setter metodunu kullanarak kontrolü sağladım
         this.quantity = quantity;
     }
 
-    // Encapsulation: Getter ve Setter metotları
+    // Price için setter (Negatif değer kontrolü)
     public void setPrice(double price) {
-        // Validation (Doğrulama): Fiyat negatif olamaz
         if (price < 0) {
-            throw new IllegalArgumentException("Hata: Ürün fiyatı negatif olamaz!");
+            throw new IllegalArgumentException("Price cannot be negative!");
         }
         this.price = price;
     }
@@ -37,22 +37,21 @@ public class Product implements Storable {
         return productId;
     }
 
-    // Interface metotlarını dolduruyoruz (Override)
+    // Interface metodlarını override ettim
     @Override
     public void addStock(int amount) {
         if(amount > 0) {
             this.quantity += amount;
-            System.out.println(amount + " adet eklendi. Yeni stok: " + this.quantity);
         }
     }
 
     @Override
     public void removeStock(int amount) {
+        // Stok yeterli mi diye kontrol ediyorum - yoksa müşteri kızar 
         if(amount > 0 && this.quantity >= amount) {
             this.quantity -= amount;
-            System.out.println(amount + " adet çıkarıldı. Kalan stok: " + this.quantity);
         } else {
-            System.out.println("Hata: Yetersiz stok veya geçersiz miktar.");
+            System.out.println("Invalid operation: Not enough stock.");
         }
     }
 
@@ -63,6 +62,6 @@ public class Product implements Storable {
     
     @Override
     public String toString() {
-        return "ID: " + productId + " | Ürün: " + name + " | Fiyat: " + price + " TL | Stok: " + quantity;
+        return name + " (" + productId + ") - Price: " + price + " - Stock: " + quantity;
     }
 }

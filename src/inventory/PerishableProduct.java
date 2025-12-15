@@ -1,14 +1,13 @@
 package inventory;
 
-import java.time.LocalDate; // Tarih işlemleri için gerekli kütüphane
+import java.time.LocalDate;
 
-// Inheritance (Kalıtım): Product sınıfının tüm özelliklerini miras alıyor
+// Inheritance: Product sınıfından miras aldım
 public class PerishableProduct extends Product {
-    private LocalDate expirationDate; // Son Kullanma Tarihi (SKT)
+    private LocalDate expirationDate; // Ekstra özellik
 
     public PerishableProduct(String productId, String name, double price, int quantity, LocalDate expirationDate) {
-        // super() ile üst sınıfın (Product) yapıcısını çağırıyoruz
-        super(productId, name, price, quantity); 
+        super(productId, name, price, quantity); // Parent class constructor'ını çağırdım
         this.expirationDate = expirationDate;
     }
 
@@ -16,9 +15,9 @@ public class PerishableProduct extends Product {
         return expirationDate;
     }
     
-    // toString metodunu eziyoruz (Overriding) ki SKT'yi de yazdırsın
+    // toString metodunu override edip tarihi de ekledim
     @Override
     public String toString() {
-        return super.toString() + " | SKT: " + expirationDate;
+        return super.toString() + " | Exp. Date: " + expirationDate;
     }
 }
