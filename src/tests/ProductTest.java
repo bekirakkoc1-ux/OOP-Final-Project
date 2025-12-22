@@ -8,7 +8,7 @@ class ProductTest {
 
     @Test
     void testProductCreation() {
-        // Geçerli bir ürün oluşturulabiliyor mu?
+        // Geçerli bir ürün oluşturulabiliyor mu? 
         Product p = new Product("P001", "Laptop", 15000.0, 10);
         assertEquals("Laptop", p.getName());
         assertEquals(15000.0, p.getPrice());
@@ -17,7 +17,7 @@ class ProductTest {
 
     @Test
     void testNegativePriceThrowsException() {
-        // Negatif fiyat girilince hata veriyor mu? (Beklenen davranış bu)
+        // Negatif fiyat girilince hata veriyor mu? (Olması gereken aga)
         assertThrows(IllegalArgumentException.class, () -> {
             new Product("P002", "Hatalı Ürün", -100.0, 5);
         });
