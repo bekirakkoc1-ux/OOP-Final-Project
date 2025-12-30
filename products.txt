@@ -1,4 +1,4 @@
-L100,Gaming Laptop,25000.0,5
-M200,Wireless Mouse,750.0,20
-K300,Mechanical Keyboard,1500.0,15
-H400,Gaming Headset,1200.0,10
+D010,Organik Sut,45.0,50
+D020,Beyaz Peynir,180.0,25
+D030,Zeytinyagi (5L),1200.0,10
+D040,Rize Cayi,150.0,40
