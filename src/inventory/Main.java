@@ -27,7 +27,9 @@ public class Main {
         boolean running = true;
         
         while(running) {
-            System.out.println("\n=== INVENTORY MANAGEMENT SYSTEM ===");
+        	System.out.println("\n#########################################");
+        	System.out.println("#      INVENTORY MANAGEMENT SYSTEM      #");
+        	System.out.println("#########################################");
             System.out.println("1. List All Products");
             System.out.println("2. Add New Product");
             System.out.println("3. Remove Product");
