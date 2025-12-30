@@ -54,4 +54,16 @@ public class Inventory {
     public List<Product> getProducts() {
         return products;
     }
+ // Tüm ürünleri listeleme (Main sınıfında menüde 1. seçenek için lazım)
+    public void listAllProducts() {
+        System.out.println("--- Current Inventory ---");
+        if (products.isEmpty()) {
+            System.out.println("No products in inventory.");
+        } else {
+            for(Product p : products) {
+                System.out.println(p); // Product sınıfındaki toString() metodunu çağırır
+            }
+        }
+        System.out.println("-------------------------");
+    }
 }
