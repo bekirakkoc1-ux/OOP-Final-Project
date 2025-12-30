@@ -9,7 +9,7 @@ public class Main {
         // Envanter nesnemi oluşturuyorum
         Inventory myInventory = new Inventory();
         
-        System.out.println("--- System Initializing ---");
+        System.out.println(">>> System Initializing... Please Wait <<<");
         
         // 1. Dosyadan ürünleri yükleme (File I/O)
         // 'products.txt' dosyasını okuyup listeye atıyor
