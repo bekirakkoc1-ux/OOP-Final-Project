@@ -30,6 +30,7 @@ public class Main {
         	System.out.println("\n#########################################");
         	System.out.println("#      INVENTORY MANAGEMENT SYSTEM      #");
         	System.out.println("#########################################");
+        	System.out.println("v1.0.2 - Stable Build\n");
             System.out.println("1. List All Products");
             System.out.println("2. Add New Product");
             System.out.println("3. Remove Product");
