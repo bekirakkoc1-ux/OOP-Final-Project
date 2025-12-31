@@ -49,6 +49,7 @@ public class Inventory {
         }
         System.out.println("-----------------------------");
         System.out.println("-----------------------------");
+       
     }
     
     // Testlerde ve raporlarda kullanmak için ürün listesini döndüren metod
