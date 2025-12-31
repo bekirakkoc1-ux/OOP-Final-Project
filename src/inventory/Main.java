@@ -97,6 +97,4 @@ public class Main {
  // To do: Add database support in the next version
  // To do: Implement user login system
     
-    
-    
 }
