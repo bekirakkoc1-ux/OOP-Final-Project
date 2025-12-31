@@ -9,7 +9,7 @@ public class Inventory {
     private List<Product> products;
 
     public Inventory() {
-        // Listeyi başlatıyorum
+        // // Listeyi ArrayList olarak initialize ediyorum
         this.products = new ArrayList<>();
     }
 
@@ -47,6 +47,7 @@ public class Inventory {
                 System.out.println(p.getName() + " (Stock: " + p.getStockLevel() + ")");
             }
         }
+        System.out.println("-----------------------------");
         System.out.println("-----------------------------");
     }
     
