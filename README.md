@@ -31,3 +31,6 @@ To verify the system logic:
 1. Right-click on the "tests" package.
 2. Select "Run As > JUnit Test".
 3. Check the results bar (Green indicates success).
+
+## Known Issues
+* Input validation is basic. Entering text instead of numbers might crash the app.
